@@ -1,0 +1,37 @@
+
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.menuConatiner{
+    
+    display: flex;
+    flex-direction:row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.navMenu{
+    width: 30px;
+    height: 45px;
+    transition: 0.1s;
+}
+
+.listIcon, .settingIcon{
+    
+}
