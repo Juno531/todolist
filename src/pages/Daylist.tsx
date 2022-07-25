@@ -1,7 +1,11 @@
 import React from "react";
 
 function Daylist() {
-  return <div>day</div>;
+  return (
+    <div>
+      <h1>Day</h1>
+    </div>
+  );
 }
 
 export default Daylist;

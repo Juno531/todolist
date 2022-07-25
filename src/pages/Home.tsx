@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "./Home.module.css";
-import { Link } from "react-router-dom";
+import { AppBar, Switch, Tab, Tabs } from "@mui/material";
+
 function Home() {
+  const routes = ["/day", "/week", "/month"];
+
   return (
     <div className={styled.container}>
-      <div>
-        <Link to={"/Home/daylist"}>daylist</Link>
-        <Link to={"/Home/weeklist"}>weeklist</Link>
-        <Link to={"/Home/monthlist"}>monthlist</Link>
-      </div>
+      <div></div>
       <div>content</div>
     </div>
   );
