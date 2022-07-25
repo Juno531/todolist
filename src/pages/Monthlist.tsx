@@ -1,7 +1,7 @@
 import React from "react";
 
 function Monthlist() {
-  return <div>week</div>;
+  return <div>month</div>;
 }
 
 export default Monthlist;

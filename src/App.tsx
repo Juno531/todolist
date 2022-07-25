@@ -14,9 +14,9 @@ function App() {
     <div>
       <Routes>
         <Route path="/home" element={<Home />}>
-          <Route path="/day" element={<Daylist />} />
-          <Route path="/week" element={<Weeklist />} />
-          <Route path="/month" element={<Monthlist />} />
+          <Route path="day" element={<Daylist />} />
+          <Route path="week" element={<Weeklist />} />
+          <Route path="month" element={<Monthlist />} />
         </Route>
         <Route path="/setting" element={<Setting />} />
         <Route path="/calendar" element={<Calendar />} />
