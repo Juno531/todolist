@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/home" element={<Home />}>
+        <Route path="/" element={<Home />}>
           <Route path="day" element={<Daylist />} />
           <Route path="week" element={<Weeklist />} />
           <Route path="month" element={<Monthlist />} />

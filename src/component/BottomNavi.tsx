@@ -33,7 +33,7 @@ function BottomNavi() {
         </div>
         <div className={styled.navIcon}>
           <NavLink
-            to="/home"
+            to="/"
             style={({ isActive }) => (isActive ? activeStyle : noneActiveStyle)}
           >
             <ListIcon

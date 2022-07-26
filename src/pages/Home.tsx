@@ -48,7 +48,7 @@ function Home() {
   return (
       <Box sx={{width:"100%"}}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} variant="fullWidth"  >
+          <Tabs value={value} onChange={handleChange} variant="fullWidth" TabIndicatorProps={{style:{background:"tomato"}}} >
             <Tab label="day" {...a11yProps(0)}></Tab>
             <Tab label="week" {...a11yProps(1)}></Tab>
             <Tab label="month" {...a11yProps(2)}></Tab>
