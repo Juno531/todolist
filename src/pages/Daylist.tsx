@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "./ListStyle.module.css";
 import ListAdd from "./ListAdd";
 
-
 function Daylist() {
+  const [savedList, setList] = useState(0);
+
   return (
     <div className={styled.container}>
-      <h3 className={styled.date}>2022-08-04</h3>
       <div>
-        <h2>타입스크립트</h2>
+        <p className={styled.date}>2022-08-04</p>
+      </div>
+      <div>
+        <p>타입스크립트</p>
         <span>노마드코더 타입스크립트 강의듣기</span>
       </div>
       <div>
-        <h2>타입스크립트</h2>
+        <p>타입스크립트</p>
         <span>노마드코더 타입스크립트 강의듣기</span>
       </div>
       <div>

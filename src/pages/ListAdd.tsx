@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import AddIcon from "../assets/icons/plus.svg";
 
 function ListAdd() {
-  const [startDate, setDate] = useState(new Date());
+  const [text, setText] = useState("");
+  const now = new Date();
+  const todayMonth = now.getMonth() + 1;
+  const todayDate = now.getDate();
 
+  const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setText(e.currentTarget.value);
+  };
+
+  const onClick = (e: React.ButtonHTMLAttributes) => {
+    localStorage.setItem("");
+  };
   return (
     <div>
       <div>
-        <DatePicker
-          selected={startDate}
-          onChange={(date: Date) => setDate(date)}
-        />
+        <input value={text} onChange={onChange}></input>
       </div>
     </div>
   );
