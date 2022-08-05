@@ -11,13 +11,15 @@ function ListAdd() {
     setText(e.currentTarget.value);
   };
 
-  const onClick = (e: React.ButtonHTMLAttributes) => {
-    localStorage.setItem("");
+  const onClick = () => {
+    localStorage.setItem(`${todayMonth}${todayDate}${localStorage.length}`
+    , JSON.stringify(text));
   };
   return (
     <div>
       <div>
         <input value={text} onChange={onChange}></input>
+        <button onClick={onClick}>save</button>
       </div>
     </div>
   );
