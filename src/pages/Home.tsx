@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "./Home.module.css";
-import { Tab, Tabs, Box,Typography } from "@mui/material";
-import PropTypes from 'prop-types';
-import Daylist from "./Daylist"
-import Weeklist from "./Weeklist"
-import Monthlist from "./Monthlist"
+import { Tab, Tabs, Box, Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import Daylist from "./Daylist";
+import Weeklist from "./Weeklist";
+import Monthlist from "./Monthlist";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -22,6 +22,7 @@ function TabPanel(props: TabPanelProps) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      style={{ padding: 0 }}
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -35,7 +36,7 @@ function TabPanel(props: TabPanelProps) {
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 function Home() {
@@ -46,18 +47,56 @@ function Home() {
   };
 
   return (
-      <Box sx={{width:"100%"}}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs value={value} onChange={handleChange} variant="fullWidth" TabIndicatorProps={{style:{background:"tomato"}}} >
-            <Tab label="day" {...a11yProps(0)}></Tab>
-            <Tab label="week" {...a11yProps(1)}></Tab>
-            <Tab label="month" {...a11yProps(2)}></Tab>
-          </Tabs>
-        </Box>
-        <TabPanel value={value} index={0}><Daylist/></TabPanel>
-        <TabPanel value={value} index={1}><Weeklist/></TabPanel>
-        <TabPanel value={value} index={2}><Monthlist/></TabPanel>
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="fullWidth"
+          TabIndicatorProps={{ style: { background: "tomato" } }}
+        >
+          <Tab
+            label={
+              <span
+                className={value === 0 ? styled.activeTab : styled.custamizeTab}
+              >
+                {""}day
+              </span>
+            }
+            {...a11yProps(0)}
+          ></Tab>
+          <Tab
+            label={
+              <span
+                className={value === 1 ? styled.activeTab : styled.custamizeTab}
+              >
+                {""}week
+              </span>
+            }
+            {...a11yProps(1)}
+          ></Tab>
+          <Tab
+            label={
+              <span
+                className={value === 2 ? styled.activeTab : styled.custamizeTab}
+              >
+                {""}month
+              </span>
+            }
+            {...a11yProps(2)}
+          ></Tab>
+        </Tabs>
       </Box>
+      <TabPanel value={value} index={0}>
+        <Daylist />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Weeklist />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Monthlist />
+      </TabPanel>
+    </Box>
   );
 }
 
