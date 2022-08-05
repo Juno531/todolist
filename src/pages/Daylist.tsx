@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "./ListStyle.module.css";
 import ListAdd from "./ListAdd";
-import "react-datepicker/dist/react-datepicker.css";
 
-출처: https: function Daylist() {
+
+function Daylist() {
   return (
     <div className={styled.container}>
       <h3 className={styled.date}>2022-08-04</h3>
