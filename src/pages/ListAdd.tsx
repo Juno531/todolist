@@ -1,20 +1,34 @@
 import React, { useState } from "react";
-import AddIcon from "../assets/icons/plus.svg";
+
+type Data = {
+  key: number;
+  textData: string;
+};
+
+const TODOS_KEY = "todos";
+const todos: Data[] = [];
+
+// function saveTodos() {
+//   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
+// }
 
 function ListAdd() {
   const [text, setText] = useState("");
-  const now = new Date();
-  const todayMonth = now.getMonth() + 1;
-  const todayDate = now.getDate();
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value);
   };
 
   const onClick = () => {
-    localStorage.setItem(`${todayMonth}${todayDate}${localStorage.length}`
-    , JSON.stringify(text));
+    const newToDoObj: Data = {
+      key: Date.now(),
+      textData: text,
+    };
+    todos.push(newToDoObj);
+    console.log(todos);
+    localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
   };
+
   return (
     <div>
       <div>
