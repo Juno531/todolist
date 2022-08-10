@@ -1,0 +1,25 @@
+
+.listContainer{
+    justify-content: baseline;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todoItem{
+    justify-content: space-between;
+    display: flex;
+    width: 80%;
+    padding: 15px;
+    margin: 5px;
+}
+
+.deleteIcon{
+    width: 20px;
+    pointer-events: none;
+}
+
+.deleteIcon:active{
+    transition: 0.2s;
+    color: tomato;
+}

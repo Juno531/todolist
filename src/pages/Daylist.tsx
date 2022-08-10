@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styled from "./ListStyle.module.css";
 import TodayDate from "../component/TodayDate";
+import List from "../component/List";
 import { ReactComponent as AddIcon } from "../assets/icons/add.svg";
-import { ReactComponent as DeleteIcon } from "../assets/icons/delete.svg";
 
 type Data = {
-  key: number;
+  mykey: number;
   textData: string;
 };
 
-const TODOS_KEY = "daytodos";
-const todos: Data[] = [];
+const TODOS_KEY = "daytodos"; // localStorage KEY
+const todos: Data[] = []; // input 데이터를 저장하기 위한 임시 배열
 
-function TodoItem({ key, textData }: Data) {
+function TodoItem({ mykey, textData }: Data) {
   return (
-    <div key={key}>
+    <div key={mykey}>
       <h2>{textData}</h2>
     </div>
   );
@@ -30,18 +30,18 @@ function Daylist() {
 
   const onClick = () => {
     const newToDoObj: Data = {
-      key: Date.now(),
+      mykey: Date.now(),
       textData: text,
     };
     if (text.length >= 1) {
       todos.push(newToDoObj);
-      console.log(todos);
       setList(todos);
+      console.log(typeof todos);
       localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
       setText("");
-    } else {
-      new Error("2글자 이상 적어주세요");
     }
+
+    console.log(todos);
   };
 
   return (
@@ -64,9 +64,7 @@ function Daylist() {
         </div>
       </div>
       <div className={styled.todoContainer}>
-        {list.map((li, index) => (
-          <TodoItem key={index} textData={li.textData} />
-        ))}
+        <List mykey="daytodos"></List>
       </div>
     </div>
   );

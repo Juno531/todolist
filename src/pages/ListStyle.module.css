@@ -12,6 +12,9 @@
     align-items: center;
 }
 
+.todoContainer{
+    width: 100%;
+}
 
 /* ====== todoAdd ====== */
 
@@ -29,7 +32,7 @@
 }
 .icon{
     display: flex;
-    width: 22px;
+    width: 24px;
     padding: 3px;
 }
 
