@@ -20,7 +20,8 @@ function List(props: ListProps) {
   const [list, setList] = useState<Data[]>([]);
 
   useEffect(() => {
-    getData();
+    getData;
+    console.log("Data loaded");
   });
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -30,6 +31,7 @@ function List(props: ListProps) {
   const getData = () => {
     const data: string = localStorage.getItem(TODOS_KEY)!;
     setList(JSON.parse(data));
+    console.log(`list ${list}`);
   };
 
   /* 
@@ -48,8 +50,6 @@ function List(props: ListProps) {
       localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
       setText("");
     }
-
-    console.log(toDos);
   };
 
   // 로컬스토리지 데이터 삭제
@@ -58,6 +58,7 @@ function List(props: ListProps) {
     console.log(list.id);
     toDos = toDos.filter((toDo) => `${toDo.mykey}` !== list.id);
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+    setList(toDos);
   };
 
   return (
@@ -67,7 +68,7 @@ function List(props: ListProps) {
           className={styled.todoAddInput}
           value={text}
           onChange={onChange}
-          placeholder="오늘의 할일"
+          placeholder="Write Todo.."
           required={true}
           minLength={2}
           maxLength={50}
@@ -77,8 +78,8 @@ function List(props: ListProps) {
         </div>
       </div>
       <div className={styled.listContainer}>
-        {toDos !== []
-          ? toDos.map((list: Data, index: number) => (
+        {list !== []
+          ? list.map((list: Data, index: number) => (
               <div id={`${list.mykey}`} className={styled.todoItem} key={index}>
                 {list.textData}
                 <button

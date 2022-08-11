@@ -9,10 +9,10 @@ function Daylist() {
   return (
     <div className={styled.container}>
       <div>
-        <TodayDate></TodayDate>
+        <TodayDate todayKey={TODOS_KEY}></TodayDate>
       </div>
       <div className={styled.todoContainer}>
-        <List mykey={`${TODOS_KEY}`}></List>
+        <List mykey={TODOS_KEY}></List>
       </div>
     </div>
   );
