@@ -16,25 +16,3 @@
     width: 100%;
 }
 
-/* ====== todoAdd ====== */
-
-.todoAdd{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.todoAddInput{
-    width: 50%;
-    font-size: 15px;
-    border-width: 0 0 1px 0;
-}
-.icon{
-    display: flex;
-    width: 24px;
-    padding: 3px;
-}
-
-
-/* ====== ======  */
