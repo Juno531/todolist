@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "./Home.module.css";
 import { Tab, Tabs, Box, Typography } from "@mui/material";
-import PropTypes from "prop-types";
 import Daylist from "./Daylist";
 import Weeklist from "./Weeklist";
 import Monthlist from "./Monthlist";

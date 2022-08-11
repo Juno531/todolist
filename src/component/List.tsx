@@ -21,7 +21,6 @@ function List(props: ListProps) {
 
   useEffect(() => {
     getData;
-    console.log("Data loaded");
   });
 
   const onChange = (e: React.FormEvent<HTMLInputElement>) => {
