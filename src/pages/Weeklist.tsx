@@ -22,7 +22,6 @@ function Weeklist() {
   );
 
   useEffect(() => {
-    console.log("week");
     getData;
   });
 

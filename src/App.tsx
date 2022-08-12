@@ -20,7 +20,7 @@ function App() {
           <Route path="addlist" element={<ListAdd />} />
         </Route>
         <Route path="/setting" element={<Setting />} />
-        <Route path="/calendar" element={<Calendar />} />
+        
       </Routes>
 
       <div>

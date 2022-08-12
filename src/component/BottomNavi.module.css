@@ -32,6 +32,22 @@
     transition: 0.1s;
 }
 
-.listIcon, .settingIcon{
-    
+/* ======= Nav add ====== */
+.navAdd {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.navAdd::before {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.navAddIcon {
+    width: 25px;
+    height: 45px;
+    transition: 0.1s;
 }

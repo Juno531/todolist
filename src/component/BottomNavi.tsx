@@ -3,7 +3,7 @@ import styled from "./BottomNavi.module.css";
 
 import { ReactComponent as ListIcon } from "../assets/icons/list.svg";
 import { ReactComponent as SettingIcon } from "../assets/icons/setting.svg";
-import { ReactComponent as CalendarIcon } from "../assets/icons/calendar.svg";
+import { ReactComponent as AddIcon} from "../assets/icons/addcross.svg";
 import { NavLink } from "react-router-dom";
 
 const activeStyle = {
@@ -23,16 +23,6 @@ function BottomNavi() {
       <div className={styled.menuConatiner}>
         <div className={styled.navIcon}>
           <NavLink
-            to="/calendar"
-            style={({ isActive }) => (isActive ? activeStyleCal : {})}
-          >
-            <CalendarIcon
-              className={`${styled.navMenu} ${styled.calendarIcon}`}
-            ></CalendarIcon>
-          </NavLink>
-        </div>
-        <div className={styled.navIcon}>
-          <NavLink
             to="/"
             style={({ isActive }) => (isActive ? activeStyle : noneActiveStyle)}
           >
@@ -40,6 +30,9 @@ function BottomNavi() {
               className={`${styled.navMenu} ${styled.listIcon}`}
             ></ListIcon>
           </NavLink>
+        </div>
+        <div className={styled.navAdd}>
+          <AddIcon className={styled.navAddIcon}></AddIcon>
         </div>
         <div className={styled.navIcon}>
           <NavLink
