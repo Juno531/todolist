@@ -41,13 +41,16 @@
     width: 100%;
 }
 
-.navAdd::before {
-    border: 1px solid black;
-    border-radius: 50%;
-}
+
 
 .navAddIcon {
-    width: 25px;
-    height: 45px;
+    position: absolute;
+    bottom: 13px;
+    width: 15px;
+    height: 15px;
+    padding: 28px;
     transition: 0.1s;
+ 
+    background-color: rgba(255,99,71,0.8);
+    border-radius: 50%;
 }

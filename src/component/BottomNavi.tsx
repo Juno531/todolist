@@ -3,7 +3,7 @@ import styled from "./BottomNavi.module.css";
 
 import { ReactComponent as ListIcon } from "../assets/icons/list.svg";
 import { ReactComponent as SettingIcon } from "../assets/icons/setting.svg";
-import { ReactComponent as AddIcon} from "../assets/icons/addcross.svg";
+import { ReactComponent as AddIcon } from "../assets/icons/addcross.svg";
 import { NavLink } from "react-router-dom";
 
 const activeStyle = {
@@ -31,9 +31,9 @@ function BottomNavi() {
             ></ListIcon>
           </NavLink>
         </div>
-        <div className={styled.navAdd}>
+        {/* <div className={styled.navAdd}>
           <AddIcon className={styled.navAddIcon}></AddIcon>
-        </div>
+        </div> */}
         <div className={styled.navIcon}>
           <NavLink
             to="/setting"
