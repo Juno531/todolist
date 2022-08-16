@@ -2,13 +2,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Setting from "./pages/Setting";
-import Calendar from "./pages/Calendar";
 import BottomNavi from "./component/BottomNavi";
 import Daylist from "./pages/Daylist";
 import Weeklist from "./pages/Weeklist";
 import Monthlist from "./pages/Monthlist";
 import ListAdd from "./pages/ListAdd";
-
 function App() {
   return (
     <div>
@@ -20,7 +18,6 @@ function App() {
           <Route path="addlist" element={<ListAdd />} />
         </Route>
         <Route path="/setting" element={<Setting />} />
-        
       </Routes>
 
       <div>
